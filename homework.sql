@@ -68,13 +68,13 @@ GROUP BY store_id;
 
 --9. How many payment amounts (4.99, 5.99, etc.) had a number of rentals above 250 for customers with ids between 380 and 430? (use group by and having > 250)
 
-SELECT COUNT(amount), rental_id
+SELECT COUNT(DISTINCT amount)
 FROM payment
 WHERE customer_id BETWEEN 380 AND 430
 GROUP BY customer_id
 HAVING COUNT(rental_id) > 250;
 
-answer--none --
+--answer--none ( not 100 percent sure if I did this one correctly)
 
 --10. Within the film table, how many rating categories are there? And what rating has the most movies total?
 
